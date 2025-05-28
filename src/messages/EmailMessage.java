@@ -21,6 +21,7 @@ public class EmailMessage extends Message {
 	// Sudah melakukan Dependency Inversion priciple, dengan mengubah modul tingkat tinggi,
 	// tingkat rendah supaya ketika ingin memanggil send, tidak perlu harus spesifik ke subclass
 	// namun bisa secara general terhadap abstractnya
+	
 	@Override
 	public void send(String username, String password) {
 		boolean isAuth = loginMethod.authenticated(new AuthCredentials(username, password));
